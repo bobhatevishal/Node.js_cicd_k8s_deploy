@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: node-k8s-container
-          image: your-dockerhub-username/node-k8s-app:latest
+          image: vishalbobhate/node-k8s-app:latest
           ports:
             - containerPort: 3000
