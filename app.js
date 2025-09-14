@@ -59,7 +59,7 @@ app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok", message: "Service is healthy ✅" });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`✅ Server is running at http://localhost:${PORT}`);
+// Start server and listen on all network interfaces
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Server is running at http://0.0.0.0:${PORT}`);
 });
