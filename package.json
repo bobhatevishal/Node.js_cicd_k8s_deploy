@@ -1,8 +1,8 @@
 {
   "name": "node-k8s-app",
   "version": "1.0.0",
-  "description": "A simple Node.js app for Kubernetes deployment",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js"
   },
