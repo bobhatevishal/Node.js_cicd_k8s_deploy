@@ -32,7 +32,10 @@ jobs:
 
       - name: Configure kubeconfig
         run: |
-          echo "${{ secrets.KUBE_CONFIG_DATA }}" > $HOME/.kube/config
+            mkdir -p $HOME/.kube
+            echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > $HOME/.kube/config
+            chmod 600 $HOME/.kube/config
+
 
       - name: Deploy to Kubernetes
         run: |
